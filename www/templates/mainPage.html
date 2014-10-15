@@ -1,0 +1,30 @@
+<ion-pane title="'Home" id="mainPage" class="page" >
+
+
+
+    <ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">bar-light</h1>
+    </ion-header-bar>
+    <ion-content  style="background: url('img/noise.png'); background-color: #B9B9B9; background-repeat: repeat;">
+            <ion-list>
+
+                <ion-item class="deal-item"  ng-repeat="deal in deals"  on-tap="dealClicked('{{deal.id}}');" style="background-image:url('{{deal.pictures[0]}}');">
+                    {{deal.name}}
+                    <br />
+                    {{deal.restraunt}}
+                    <br />
+                    {{deal.ammount}}
+                    <br />
+                    {{deal.description}}
+                </ion-item>
+
+                </ion-list>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive">
+        <div class="button-bar">
+            <a class="button button-clear icon-left ion-star">First</a>
+            <a class="button button-clear icon ion-camera"></a>
+            <a class="button button-clear icon-left ion-star">Third</a>
+        </div>
+    </ion-footer-bar>
+</ion-pane>
